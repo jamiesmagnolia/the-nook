@@ -4,12 +4,12 @@
  * strings and chars.
  */
 
-const mongoose = require('mongoose');
+import { Schema, model } from 'mongoose';
 
 /**
  * Book Schema.
  */
-const bookSchema = new mongoose.Schema({
+const bookSchema = new Schema({
 
     // TODO: MongoDB uses a default ObjectID using _id
 
@@ -142,4 +142,4 @@ const bookSchema = new mongoose.Schema({
 /**
  * Export Book schema.
  */
-module.exports = mongoose.model('Book', bookSchema);
+export default model('Book', bookSchema);
