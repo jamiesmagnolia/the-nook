@@ -24,6 +24,15 @@ const app = express();
  */
 app.use(express.json());
 
+
+/**
+ * Importing and using Book Routes.
+ * The routes handle CRUD operations for the books.
+ */
+import bookRoutes from './routes/book-routes.js';
+app.use('/api/books', bookRoutes);
+
+
 /**
  * Connecting to MongoDB.
  */
