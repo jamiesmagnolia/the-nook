@@ -1,0 +1,49 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Runtime data
+pids
+*.pid
+*.pid.lock
+
+# Environment variables
+.env
+
+# IDE-specific files
+.vscode/
+.idea/
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Angular-specific files
+.angular/
+
+# Optional npm cache directory
+.npm/
+
+# Coverage output (from testing)
+coverage/
+
+# Compiled TypeScript files
+*.tsbuildinfo
+
+# Public build files (if Angular generates a production build here)
+public/
+
+# Temporary files
+*.tmp
+*.temp
