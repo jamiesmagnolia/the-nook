@@ -12,11 +12,6 @@ const mongoose = require('mongoose');
 const bookSchema = new mongoose.Schema({
 
     // TODO: MongoDB uses a default ObjectID using _id
-    // book_id: {
-    //     type: Number,
-    //     required: true,
-    //     // default: 
-    // },
 
     /**
      * Official title / name of the book.
