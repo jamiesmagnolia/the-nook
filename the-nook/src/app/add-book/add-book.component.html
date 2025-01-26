@@ -1,0 +1,75 @@
+<div class="add-book-container">
+
+    <mat-card>
+
+        <mat-card-header>
+            <mat-card-title>
+                Add a book to your library!
+            </mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content class="form-fields-container">
+
+            <form class="add-book-form">
+
+                <!-- TOOD: Add images input AND (set image as cover image select) -->
+
+                <mat-form-field>
+                    <mat-label>Title</mat-label>
+                    <input matInput placeholder="E.g. The Midnight Library">
+                </mat-form-field>
+        
+                <mat-form-field>
+                    <mat-label>Author</mat-label>
+                    <input matInput placeholder="E.g. Matt Haig">
+                </mat-form-field>
+        
+                <mat-form-field>
+                    <mat-label>Description</mat-label>
+                    <textarea matInput #description></textarea>
+                    <mat-hint align="start">You can also write a synopsis instead.</mat-hint>
+                    <mat-hint align="end">{{description.value.length}}/500</mat-hint>
+                </mat-form-field>
+        
+                <!-- TODO: Add a star rating system (0.5 step) -->
+                <!-- <mat-form-field>
+                    <mat-label>Rating</mat-label>
+                    <mat-slider 
+                    [min]="0"
+                    [max]="5"
+                    >
+                        <input matSliderThumb #slider>
+                    </mat-slider>
+                </mat-form-field> -->
+        
+                <mat-form-field>
+                    <mat-label>Language</mat-label>
+                    <mat-select>
+                        <mat-option value="English">English</mat-option>
+                        <mat-option value="Bahasa Indonesia">Bahasa Indonesia</mat-option>
+                        <mat-option value="Chinese (Simplified)">Chinese (Simplified)</mat-option>
+                        <mat-option value="Others (to be added)">Others (to be added)</mat-option>
+                    </mat-select>
+                </mat-form-field>
+        
+                <mat-form-field>
+                    <mat-label>Status</mat-label>
+                    <input matInput placeholder="E.g. Read">
+                </mat-form-field>
+        
+                <!-- TODO: Add Genre tags / chips here -->
+                <mat-form-field>
+                    <mat-label>Genres</mat-label>
+                </mat-form-field>
+        
+            </form>            
+
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button type="submit">Add</button>
+        </mat-card-actions>
+
+    </mat-card>
+
+</div>
