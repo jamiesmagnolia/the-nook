@@ -9,7 +9,7 @@ import {MatChipEditedEvent, MatChipInputEvent, MatChipsModule} from '@angular/ma
 import {LiveAnnouncer} from '@angular/cdk/a11y';
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
 import {MatIcon, MatIconModule} from '@angular/material/icon';
-
+import {MatButtonModule} from '@angular/material/button';
 
 // export interface Fruit {
 //   name: string;
@@ -29,7 +29,8 @@ export interface Genre {
     MatSelectModule,
     MatSliderModule,
     MatChipsModule,
-    MatIconModule
+    MatIconModule,
+    MatButtonModule,
   ],
   templateUrl: './add-book.component.html',
   styleUrl: './add-book.component.scss',

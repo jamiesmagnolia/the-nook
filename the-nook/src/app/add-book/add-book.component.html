@@ -12,7 +12,12 @@
 
             <form class="add-book-form">
 
-                <!-- TOOD: Add images input AND (set image as cover image select) -->
+                <!-- TODO: Have 2 columns: 1 for cover image, one for the form filling -->
+                <!-- <table>
+
+                </table> -->
+
+                <!-- TODO: Add images input AND (set image as cover image select) -->
 
                 <mat-form-field>
                     <mat-label>Title</mat-label>
@@ -50,14 +55,19 @@
                         <mat-option value="Chinese (Simplified)">Chinese (Simplified)</mat-option>
                         <mat-option value="Others (to be added)">Others (to be added)</mat-option>
                     </mat-select>
+                    <mat-hint align="start">More languages will be added in future updates.</mat-hint>
                 </mat-form-field>
         
+                <!-- TODO: Add an option to add more statuses? -->
                 <mat-form-field>
                     <mat-label>Status</mat-label>
-                    <input matInput placeholder="E.g. Read">
+                    <mat-select>
+                        <mat-option value="Read">Read</mat-option>
+                        <mat-option value="Unread">Unread</mat-option>
+                    </mat-select>
                 </mat-form-field>
         
-                <!-- TODO: Add Genre tags / chips here -->
+                <!-- TODO: Update class name -->
                 <mat-form-field class="example-chip-list">
                     <mat-label>Genres</mat-label>
                     <mat-chip-grid #chipGrid aria-label="Enter fruits">
@@ -82,15 +92,17 @@
                         (matChipInputTokenEnd)="add($event)"
                       />
                     </mat-chip-grid>
+                    <mat-hint align="start">You can add more genres to the list!</mat-hint>
                   </mat-form-field>
-                  
         
             </form>            
 
         </mat-card-content>
 
         <mat-card-actions>
-            <button type="submit">Add</button>
+            <button mat-flat-button>
+                <mat-icon>add</mat-icon>
+            </button>
         </mat-card-actions>
 
     </mat-card>
