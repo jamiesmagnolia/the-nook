@@ -58,9 +58,32 @@
                 </mat-form-field>
         
                 <!-- TODO: Add Genre tags / chips here -->
-                <mat-form-field>
+                <mat-form-field class="example-chip-list">
                     <mat-label>Genres</mat-label>
-                </mat-form-field>
+                    <mat-chip-grid #chipGrid aria-label="Enter fruits">
+                      @for (genre of genres(); track genre) {
+                        <mat-chip-row
+                          (removed)="remove(genre)"
+                          [editable]="true"
+                          (edited)="edit(genre, $event)"
+                          [aria-description]="'press enter to edit ' + genre.name"
+                        >
+                          {{genre.name}}
+                          <button matChipRemove [attr.aria-label]="'remove ' + genre.name">
+                            <mat-icon>cancel</mat-icon>
+                          </button>
+                        </mat-chip-row>
+                      }
+                      <input
+                        placeholder="New genre..."
+                        [matChipInputFor]="chipGrid"
+                        [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                        [matChipInputAddOnBlur]="addOnBlur"
+                        (matChipInputTokenEnd)="add($event)"
+                      />
+                    </mat-chip-grid>
+                  </mat-form-field>
+                  
         
             </form>            
 
