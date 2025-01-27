@@ -10,6 +10,7 @@ import {LiveAnnouncer} from '@angular/cdk/a11y';
 import {COMMA, ENTER} from '@angular/cdk/keycodes';
 import {MatIcon, MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import { HttpClient } from '@angular/common/http';
 
 // export interface Fruit {
 //   name: string;
@@ -44,7 +45,8 @@ export class AddBookComponent {
   bookLanguage = new FormControl('');
   bookStatus = new FormControl('');
 
-  onInput() {}
+
+  // GENRE CHIPS - START
 
   readonly addOnBlur = true;
   readonly separatorKeysCodes = [ENTER, COMMA] as const;
@@ -108,5 +110,9 @@ export class AddBookComponent {
       return genres;
     });
   }
+
+  // GENRE CHIPS - END
+
+
 
 }
