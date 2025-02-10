@@ -78,7 +78,7 @@ const bookSchema = new Schema({
      * The book genre / categories.
      */
     book_genre: {
-        type: String,
+        type: [String], // TODO: List of strings?
         required: [true, 'The book genre(s) is required.'],
         enum: { // TODO: Double check if implementation if correct
             values: [
