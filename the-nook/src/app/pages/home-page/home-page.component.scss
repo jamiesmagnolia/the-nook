@@ -33,10 +33,14 @@
 
 .room-floor {
     background-color: #45322e;
-    height: 50px;
+    height: 15vh;
     width: 100%;
+    justify-items: center;
 }
 
 .floor-shadow {
-
+    background-color: black;
+    height: 2vh;
+    width: 900px;
+    border-radius: 25px;
 }

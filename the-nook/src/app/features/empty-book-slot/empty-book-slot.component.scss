@@ -1,0 +1,43 @@
+.book-slot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1% 1%; // TODO: check again don't hard code
+    background-color: #624944;
+    height: 220px;
+    width: 90px;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+}
+
+.book-slot :hover {
+    opacity: 1;
+}
+
+.add-button {
+    background-color: #a6a6a6;
+    justify-content: center; // hoping to center add mat-icon
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: 45px;
+    max-height: 45px;
+    border: none;
+    border-radius: 50px;
+
+}
+
+.add-button :hover {
+    background-color: #d9d9d9;
+    cursor: pointer;
+}
+
+
+mat-icon {
+    color: #624944;
+}
+
+
