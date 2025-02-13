@@ -15,6 +15,9 @@
 }
 
 .book-shelf-inner {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
     background-color: #45322e;
     height: 460px;
     width: 720px;
